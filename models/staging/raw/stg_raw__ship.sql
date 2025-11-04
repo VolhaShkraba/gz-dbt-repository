@@ -6,17 +6,18 @@ source as (
 
 ),
 
-renamed as (
+raw as (
 
     select
         orders_id,
-        shipping_fee,
-        shipping_fee_1,
-        logcost,
+       cast ( shipping_fee as int64) as shipping_fee
+       logcost,
         ship_cost
 
     from source
 
 )
 
-select * from renamed
+select * from raw
+
+
