@@ -1,0 +1,5 @@
+SELECT * FROM `warm-utility-475009-h6.gz_raw_data.raw_gz_product` AS product 
+INNER JOIN `warm-utility-475009-h6.gz_raw_data.raw_gz_sales` AS sales 
+ON product.products_id = sales.pdt_id
+inner join `warm-utility-475009-h6.gz_raw_data.raw_gz_ship` AS ship 
+on ship.orders_id = sales.orders_id
