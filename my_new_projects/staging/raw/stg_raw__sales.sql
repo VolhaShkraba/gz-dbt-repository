@@ -14,9 +14,7 @@ renamed as (
         pdt_id,
         revenue,
         quantity
-
     from source
 
 )
-
 select * from renamed
