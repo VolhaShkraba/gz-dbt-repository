@@ -1,6 +1,3 @@
-sql
--- raw
-
 with 
 
 source as (
@@ -9,11 +6,12 @@ source as (
 
 ),
 
-raw named as (
+renamed as (
 
     select
         date_date,
         orders_id,
+        pdt_id,
         revenue,
         quantity
 
@@ -21,4 +19,4 @@ raw named as (
 
 )
 
-select * from raw
+select * from renamed

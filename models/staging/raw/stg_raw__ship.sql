@@ -1,18 +1,19 @@
+-- int_sales_margin.sql
 with 
-
-source as (
+source as (raw
 
     select * from {{ source('raw', 'ship') }}
 
 ),
 
-raw as (
+raw named as (
 
     select
-        orders_id,
-       cast ( shipping_fee as int64) as shipping_fee
-       logcost,
-        ship_cost
+    orders_id,
+    cast ( shipping_fee as int64) as shipping_fee,
+    logcost,
+    ship_cost,
+    marge
 
     from source
 
